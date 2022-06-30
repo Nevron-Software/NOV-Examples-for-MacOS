@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{09A7C400-3645-4838-9CE9-5A7BFFC035EA}|Default">
+  <MonoDevelop.Ide.ItemProperties.Nevron.Nov.Examples.XamarinMac.Retail PreferredExecutionTarget="Test1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nevron.Nov.Examples.XamarinMac.Retail.csproj">
+    <Files>
+      <File FileName="Entitlements.plist" />
+      <File FileName="Info.plist" />
+      <File FileName="Nevron.Nov.Examples.XamarinMac.Retail.csproj" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Nevron.Nov.Examples.XamarinMac.Retail" expanded="True">
+            <Node name="Nevron.Nov.Examples.XamarinMac.Retail" expanded="True" selected="True">
+              <Node name="References" expanded="True" />
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

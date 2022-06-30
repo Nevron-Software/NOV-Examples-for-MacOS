@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nevron.Nov.Examples.XamarinMac</name>
+    </assembly>
+    <members>
+        <member name="M:Nevron.Nov.ExamplesApp.Mac.MainWindow.Initialize">
+            <summary>
+            Shared initialization code.
+            </summary>
+        </member>
+    </members>
+</doc>

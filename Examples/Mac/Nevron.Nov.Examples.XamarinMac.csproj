@@ -1,0 +1,129 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{09A7C400-3645-4838-9CE9-5A7BFFC035EA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Nevron.Nov.Examples.XamarinMac</RootNamespace>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <AssemblyName>Nevron.Nov.Examples.XamarinMac</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Nevron.Examples.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <UseXamMacFullFramework>true</UseXamMacFullFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>../../Apps</OutputPath>
+    <DefineConstants>DEBUG;UNIFIEDAPI</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <UseRefCounting>true</UseRefCounting>
+    <UseSGen>true</UseSGen>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <CodeSigningKey>Developer ID Application</CodeSigningKey>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>false</CreatePackage>
+    <AOTMode>None</AOTMode>
+    <PackageSigningKey>Developer ID Installer</PackageSigningKey>
+    <LinkMode>None</LinkMode>
+    <UseHardenedRuntime>true</UseHardenedRuntime>
+    <XamMacArch>x86_64</XamMacArch>
+    <DocumentationFile>Nevron.Nov.Examples.XamarinMac.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>../../Apps</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <LinkMode>None</LinkMode>
+    <UseRefCounting>true</UseRefCounting>
+    <UseSGen>true</UseSGen>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <CreatePackage>true</CreatePackage>
+    <CodeSigningKey>Developer ID Application</CodeSigningKey>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <DefineConstants>UNIFIEDAPI</DefineConstants>
+    <AOTMode>None</AOTMode>
+    <UseHardenedRuntime>true</UseHardenedRuntime>
+    <PackageSigningKey>Developer ID Installer</PackageSigningKey>
+    <XamMacArch>x86_64</XamMacArch>
+    <CodeSignEntitlements>Entitlements.plist</CodeSignEntitlements>
+    <DocumentationFile>Nevron.Nov.Examples.XamarinMac.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+    <Reference Include="Nevron.Nov.Host.XamarinMac">
+      <Name>Nevron.Nov.Host.XamarinMac</Name>
+      <HintPath>../../Bin/Nevron.Nov.Host.XamarinMac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Text">
+      <Name>Nevron.Nov.Text</Name>
+      <HintPath>../../Bin/Nevron.Nov.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Presentation">
+      <Name>Nevron.Nov.Presentation</Name>
+      <HintPath>../../Bin/Nevron.Nov.Presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Schedule">
+      <Name>Nevron.Nov.Schedule</Name>
+      <HintPath>../../Bin/Nevron.Nov.Schedule.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Chart">
+      <Name>Nevron.Nov.Chart</Name>
+      <HintPath>../../Bin/Nevron.Nov.Chart.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Diagram">
+      <Name>Nevron.Nov.Diagram</Name>
+      <HintPath>../../Bin/Nevron.Nov.Diagram.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Examples">
+      <Name>Nevron.Nov.Examples</Name>
+      <HintPath>../../Bin/Nevron.Nov.Examples.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Grid">
+      <Name>Nevron.Nov.Grid</Name>
+      <HintPath>../../Bin/Nevron.Nov.Grid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nevron.Nov.Barcode">
+      <Name>Nevron.Nov.Barcode</Name>
+      <HintPath>../../Bin/Nevron.Nov.Barcode.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="Main.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\NOVExamples.icns" />
+  </ItemGroup>
+</Project>

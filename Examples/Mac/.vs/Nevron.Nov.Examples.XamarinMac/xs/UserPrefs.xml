@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{09A7C400-3645-4838-9CE9-5A7BFFC035EA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Core/Barcode/Tasks/NBarcodeSvgExportExample.cs">
+    <Files>
+      <File FileName="../Core/Barcode/Tasks/NBarcodeSvgExportExample.cs" Line="79" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Nevron.Nov.Examples.XamarinMac" expanded="True">
+            <Node name="Nevron.Nov.Examples.XamarinMac" expanded="True">
+              <Node name="Resources" expanded="True" />
+              <Node name="Entitlements.plist" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="Nevron.Nov.Examples.XamarinMac" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Nevron.Nov.Examples.XamarinMac PreferredExecutionTarget="Test1" />
+</Properties>

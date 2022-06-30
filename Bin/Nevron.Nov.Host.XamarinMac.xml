@@ -1,0 +1,897 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nevron.Nov.Host.XamarinMac</name>
+    </assembly>
+    <members>
+        <member name="T:Nevron.Nov.Mac.NMacPrintManager">
+            <summary>
+            The printing manager is responsible for managing the print operation under Mac.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacPrintManager.ShowPrintDialog">
+            <summary>
+            Shows the print dialog. Returns true if document was printed.
+            </summary>
+            <returns><c>true</c>, if print dialog was shown, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NMacPrintRecorder">
+            <summary>
+            Mac print recorder.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacPrintRecorder.#ctor(Nevron.Nov.UI.NPrintDocument)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Nevron.Nov.Mac.NMacPrintRecorder"/> class.
+            </summary>
+            <param name="document">Document.</param>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacPrintRecorder.RecordPrinting(AppKit.NSPrintInfo)">
+            <summary>
+            Print this instance.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacPrintRecorder.GetMaxSize">
+            <summary>
+            Gets the size of the max page. (in DIPs)
+            </summary>
+            <returns>The max page size.</returns>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer">
+            <summary>
+            NMac clipboard data object consumer.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer.#ctor(AppKit.NSPasteboard)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer"/> class.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer.IsReadOnly">
+            <summary>
+            Returns true
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer.SetData(Nevron.Nov.UI.NDataFormat,System.Object)">
+            <summary>
+            Throws an invalid operation exception
+            </summary>
+            <param name="format"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer.ContainsData(Nevron.Nov.UI.NDataFormat)">
+            <summary>
+            Queries whether data can be obtained in the specified format.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer.GetFormats">
+            <summary>
+            Gets a list of the formats in which data can be obtained.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacClipboardDataObjectConsumer.GetData(Nevron.Nov.UI.NDataFormat)">
+            <summary>
+            Gets a data object in the specified format. 
+            Returns null, if data in the specifiedformat does not exists or its retrieval failed.  
+            Returns a format specific object instance in case the data was successfully retrived.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NNovChildWindowHost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NNovChildWindowHost.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NNovChildWindowHost.ResizeSubviewsWithOldSize(CoreGraphics.CGSize)">
+            <summary>
+            Overriden to resize the subview(s) to the size of this view.
+            </summary>
+            <param name="oldSize"></param>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NNovChildWindowHost.DrawRect(CoreGraphics.CGRect)">
+            <summary>
+            Override to draw a dummy rect.
+            </summary>
+            <param name="dirtyRect"></param>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NNovApplicationInstaller">
+            <summary>
+            The Mac Application Installer 
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItem.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItem.#ctor(AppKit.NSMenuItem)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="nsMenuItem">Ns menu item.</param>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NMacMenuItemCollection">
+            <summary>
+            Represents a collection of Mac menu items
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItemCollection.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NMacMenuItemCommandSource">
+            <summary>
+            A command source that can be applied to NMenuItem instances.
+            It subsrcibes for the NMenuItem.Click event to execute the command with empty parameter.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItemCommandSource.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItemCommandSource.#ctor(Nevron.Nov.UI.NCommand)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItemCommandSource.AttachToSource(Nevron.Nov.Dom.NElement)">
+            <summary>
+            Attaches the command source to the specified element.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItemCommandSource.DetachFromSource(Nevron.Nov.Dom.NElement)">
+            <summary>
+            Detaches the command source from the specified element.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacMenuItemCommandSource.OnMenuItemClick(System.Object,System.EventArgs)">
+            <summary>
+            Called when a menu item has been clicked. Calls the ExecuteCommand method
+            with an empty parameter.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="F:Nevron.Nov.Mac.NMacMenuItemCommandSource.NMacMenuItemCommandSourceSchema">
+            <summary>
+            Schema associated with NMacMenuItemCommandSource
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacWindowState.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacWindowState.#ctor(AppKit.NSWindow)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="window">Window.</param>
+        </member>
+        <member name="P:Nevron.Nov.Mac.NMacWindowState.IsZoomed">
+            <summary>
+            Gets / sets whether the window is zoomed
+            </summary>
+            <value><c>true</c> if is zoomed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Nevron.Nov.Mac.NMacWindowState.FrameRect">
+            <summary>
+            Gets / sets the window position
+            </summary>
+            <value>The frame rect.</value>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NNovWidgetHost">
+            <summary>
+            A MonoMac.AppKit.NSView that contains a NOV widget of a a certain type.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NNovWidgetHost.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NNovWidgetHost.#ctor(Nevron.Nov.UI.NWidget)">
+            <summary>
+            Creates a new NNOVWidget that hosts the specified widget
+            </summary>
+            <param name="widget">Widget.</param>
+        </member>
+        <member name="P:Nevron.Nov.Mac.NNovWidgetHost.Widget">
+            <summary>
+            Gets the widget contained inside this host.
+            </summary>
+            <value>The widget.</value>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NMacDisableWindowView">
+            <summary>
+            The mac disable window view.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacDisableWindowView.#ctor(AppKit.NSImage)">
+            <summary>
+            Initializer constructor
+            </summary>
+            <param name="originalViewSnapshot"></param>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacDisableWindowView.RemoveOriginalView">
+            <summary>
+            Removes the original view from this view subviews and returns it.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NMacDisableWindowView.CreateSubviews(AppKit.NSView)">
+            <summary>
+            Creates the subviews of this view
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Mac.INEnabledView">
+            <summary>
+            Can be implemented by views which want to be enabled/disabled by the modal windows implementation.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Mac.INEnabledView.Enabled">
+            <summary>
+            Gets or sets whether the view is enabled.
+            </summary>
+        </member>
+        <member name="T:Nevron.Nov.Mac.NNovApplicationDelegate`1">
+            <summary>
+            Represents a NOV application delegate.
+            </summary>
+        </member>
+        <member name="E:Nevron.Nov.Mac.NNovApplicationDelegate`1.Terminating">
+            <summary>
+            Event raised after closing the main window of the application.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NNovApplicationDelegate`1.ApplicationShouldTerminateAfterLastWindowClosed(AppKit.NSApplication)">
+            <summary>
+            Overriden to make the application terminate when its last window has been closed.
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Mac.NNovApplicationDelegate`1.WillTerminate(Foundation.NSNotification)">
+            <summary>
+            Called when the application is terminating.
+            </summary>
+            <param name="notification"></param>
+        </member>
+        <member name="T:Nevron.Nov.Mac.INNovApplicationDelegate">
+            <summary>
+            Interface implemented by NOV application delegates.
+            </summary>
+        </member>
+        <member name="E:Nevron.Nov.Mac.INNovApplicationDelegate.Terminating">
+            <summary>
+            Event raised after closing the main window of the application.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Internal.panh.Enabled">
+            <summary>
+            Gets or sets whether the view is enabled.
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Internal.panh.IsFlipped">
+            <summary>
+            Overriden to return true. Rendering considers the left-top corner as zero when the view is flipped.
+            </summary>
+            <value><c>true</c> if this instance is flipped; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Nevron.Nov.Internal.panh.IsOpaque">
+            <summary>
+            Nevron Windows are generally Opaque by design
+            </summary>
+            <value><c>true</c> if this instance is opaque; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.DrawRect(CoreGraphics.CGRect)">
+            <summary>
+            Draws the rect of the view.
+            </summary>
+            <param name="abnh">Dirty rect.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.DrawSheetBorder(CoreGraphics.CGSize)">
+            <summary>
+            Draws the sheet border.
+            </summary>
+            <param name="bbnh">Border size.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.DrawFocusRingMask">
+            <summary>
+            Draws the focus ring mask.
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.DrawPageBorder(CoreGraphics.CGSize)">
+            <summary>
+            Draws the page border.
+            </summary>
+            <param name="cbnh">Border size.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.AcceptsFirstMouse(AppKit.NSEvent)">
+            <summary>
+            By default when a view is clicked, this click is "eaten" by the window, 
+            which brings itself to front and makes itself the key window.
+            By returning true, we inform the window to dispatch that mouse down to the view too.
+            </summary>
+            <returns><c>true</c>, if first mouse was acceptsed, <c>false</c> otherwise.</returns>
+            <param name="lbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.MouseEntered(AppKit.NSEvent)">
+            <summary>
+            Mouses entered the view
+            </summary>
+            <param name="mbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.MouseDown(AppKit.NSEvent)">
+            <summary>
+            Mouse is down in the view.
+            </summary>
+            <param name="nbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.MouseDragged(AppKit.NSEvent)">
+            <summary>
+            Mouse is dragged in the view
+            </summary>
+            <param name="obnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.RightMouseDragged(AppKit.NSEvent)">
+            <summary>
+            Rights the mouse dragged.
+            </summary>
+            <param name="pbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.RightMouseDown(AppKit.NSEvent)">
+            <summary>
+            Mouse right btton is down in the view
+            </summary>
+            <param name="qbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.OtherMouseDown(AppKit.NSEvent)">
+            <summary>
+            Others the mouse down.
+            </summary>
+            <param name="rbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.OtherMouseUp(AppKit.NSEvent)">
+            <summary>
+            Others the mouse up.
+            </summary>
+            <param name="sbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.OtherMouseDragged(AppKit.NSEvent)">
+            <summary>
+            Others the mouse dragged.
+            </summary>
+            <param name="tbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.ScrollWheel(AppKit.NSEvent)">
+            <summary>
+            The mouse wheel is scrolled
+            </summary>
+            <param name="ubnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.MouseMoved(AppKit.NSEvent)">
+            <summary>
+            The mouse has moved in the view
+            </summary>
+            <param name="vbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.MouseUp(AppKit.NSEvent)">
+            <summary>
+            The mouse left button is up in the view.
+            </summary>
+            <param name="wbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.RightMouseUp(AppKit.NSEvent)">
+            <summary>
+            The mouse right button is up in the view
+            </summary>
+            <param name="xbnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.MouseExited(AppKit.NSEvent)">
+            <summary>
+            The mouse left the view
+            </summary>
+            <param name="ybnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.AcceptsFirstResponder">
+            <summary>
+            Overriden to return true - i.e. the surface can be focused in the window.
+            </summary>
+            <returns><c>true</c>, if first responder was acceptsed, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.KeyDown(AppKit.NSEvent)">
+            <summary>
+            Key down.
+            </summary>
+            <param name="acnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.PerformKeyEquivalent(AppKit.NSEvent)">
+            <summary>
+            Performs the key equivalent. Passes the key event to Nevron if it wasn't handled
+            by the base class (NSView).
+            </summary>
+            <returns><c>true</c>, if key equivalent was performed, <c>false</c> otherwise.</returns>
+            <param name="bcnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.KeyUp(AppKit.NSEvent)">
+            <summary>
+            Key up.
+            </summary>
+            <param name="ccnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.BecomeFirstResponder">
+            <summary>
+            Becomes the first responder.
+            </summary>
+            <returns><c>true</c>, if first responder was become, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.ResignFirstResponder">
+            <summary>
+            Resigns the first responder.
+            </summary>
+            <returns><c>true</c>, if first responder was resigned, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.UpdateTrackingAreas">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.panh.CursorUpdate(AppKit.NSEvent)">
+            <Docs>To be added.</Docs>
+            <remarks>To be added.</remarks>
+            <summary>
+            Callled by the tracking area to update the cursor
+            </summary>
+            <param name="kcnh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.idnh.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.jinh.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.unnh.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+            <param name="xnnh">The object to compare with the current object.</param>
+            <returns>
+            Returns true if the specified Object is equal to the current Object; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.unnh.GetHashCode">
+            <summary>
+            Serves as a hash function for this type.
+            </summary>
+            <returns>
+            Returns a hash code for the current object.
+            </returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.unnh.DeepClone">
+            <summary>
+            Should never be called.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.unnh.GetImmutableKey(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="ynnh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.unnh.UpdateImageInfo">
+            <summary>
+            Creates the image info the the embedded raster.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.donh.Dispose">
+            <summary>
+            Disposes the internally created bitmap
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Internal.upnh.PrintJobTitle">
+            <summary>
+            Overriden to return the print document document name.
+            </summary>
+            <value>The print job title.</value>
+        </member>
+        <member name="M:Nevron.Nov.Internal.upnh.CanDraw">
+            <summary>
+            Overriden to return true.
+            </summary>
+            <returns><c>true</c> if this instance can draw; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:Nevron.Nov.Internal.upnh.IsFlipped">
+            <summary>
+            Overriden to return true. We are not upside-down as Mac.
+            </summary>
+            <value><c>true</c> if this instance is flipped; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Nevron.Nov.Internal.upnh.DrawRect(CoreGraphics.CGRect)">
+            <summary>
+            Draws the rect.
+            </summary>
+            <param name="xpnh">Dirty rect.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.upnh.RectForPage(System.nint)">
+            <summary>
+            Gets the rectangle (in view coordinates), that corresponds to the given page index
+            </summary>
+            <returns>The for page.</returns>
+            <param name="ypnh">Page number.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.upnh.KnowsPageRange(Foundation.NSRange@)">
+            <summary>
+            Overriden to return the page range calculated during the recording
+            </summary>
+            <returns><c>true</c>, if page range was knowsed, <c>false</c> otherwise.</returns>
+            <param name="aqnh">A range.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.qwnh.ConformsToProtocol(System.IntPtr)">
+            <summary>
+            Overriden to bypass the protocol check.
+            </summary>
+            <returns><c>true</c>, if to protocol was conformsed, <c>false</c> otherwise.</returns>
+            <param name="swnh">Protocol.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.qwnh.GetWritableTypesForPasteboard(AppKit.NSPasteboard)">
+            <summary>
+            Gets the writable types for pasteboard.
+            </summary>
+            <returns>The writable types for pasteboard.</returns>
+            <param name="twnh">Pasteboard.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.qwnh.GetWritingOptionsForType(System.String,AppKit.NSPasteboard)">
+            <summary>
+            Gets the type of the writing options for the specified data type.
+            For all data types we return Promised (that is data is provided when requested).
+            </summary>
+            <returns>The writing options for type.</returns>
+            <param name="uwnh">Type.</param>
+            <param name="vwnh">Pasteboard.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.qwnh.GetPasteboardPropertyListForType(System.String)">
+            <summary>
+            Gets the data for the specified type.
+            </summary>
+            <returns>The pasteboard property list for type.</returns>
+            <param name="wwnh">Type.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.fynh.DraggingSourceOperationMaskForLocal(System.Boolean)">
+            <summary>
+            Returns the NSDragOperation allowed by the source.
+            </summary>
+            <returns>The source operation mask for local.</returns>
+            <param name="iynh">If set to <c>true</c> flag.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.fynh.DraggedImageMovedTo(AppKit.NSImage,CoreGraphics.CGPoint)">
+            <summary>
+            Called when the dragged image has moved to a different screen location.
+            </summary>
+            <param name="jynh">Image.</param>
+            <param name="kynh">Screen point.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.fynh.DraggedImageEndedAtOperation(AppKit.NSImage,CoreGraphics.CGPoint,AppKit.NSDragOperation)">
+            <summary>
+            Called when the drag image ended.
+            </summary>
+            <param name="lynh">Image.</param>
+            <param name="mynh">Screen point.</param>
+            <param name="nynh">Operation.</param>
+        </member>
+        <member name="P:Nevron.Nov.Internal.bgoh`1.IsOpen">
+            <summary>
+            Checks whether the connection is open.
+            </summary>
+            <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Nevron.Nov.Internal.bgoh`1.GetSchema(System.String)">
+            <summary>
+            Gets the schema.
+            </summary>
+            <returns>The schema.</returns>
+            <param name="dgoh">Collection name.</param>
+        </member>
+        <member name="P:Nevron.Nov.Internal.ahoh.CanBecomeKeyWindow">
+            <summary>
+            Overriden to return true.
+            </summary>
+            <value><c>true</c> if this instance can become key window; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Nevron.Nov.Internal.ahoh.CanBecomeMainWindow">
+            <summary>
+            Overriden to return true.
+            </summary>
+            <value><c>true</c> if this instance can become main window; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Nevron.Nov.Internal.ahoh.Dispose(System.Boolean)">
+            <summary>
+            Overriden to raise the Destroyed event
+            </summary>
+            <param name="vhoh">If set to <c>true</c> disposing.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.ahoh.eioh.DidBecomeKey(Foundation.NSNotification)">
+            <summary>
+            Called when the window becomes the key (focused) window. 
+            We use this event as Window-Activated analog.
+            </summary>
+            <param name="fioh">Notification.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.ahoh.eioh.DidResignKey(Foundation.NSNotification)">
+            <summary>
+            Called when the window looses focus.
+            We use this event as Window-Deactivated analog.
+            </summary>
+            <param name="gioh">Notification.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.ahoh.eioh.DidMiniaturize(Foundation.NSNotification)">
+            <summary>
+            Called when the window is minituarized
+            </summary>
+            <param name="hioh">Notification.</param>
+        </member>
+        <member name="P:Nevron.Nov.Internal.xioh.IsFlipped">
+            <summary>
+            Overriden to return true. Rendering considers the left-top corner as zero when the view is flipped.
+            </summary>
+            <value><c>true</c> if this instance is flipped; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Nevron.Nov.Internal.xioh.IsOpaque">
+            <summary>
+            This view needs to be transparent, so return false.
+            </summary>
+            <value><c>true</c> if this instance is opaque; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.DrawRect(CoreGraphics.CGRect)">
+            <summary>
+            Draws the rect of the view.
+            </summary>
+            <param name="ajoh">Dirty rect.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.AcceptsFirstMouse(AppKit.NSEvent)">
+            <summary>
+            By default when a view is clicked, this click is "eaten" by the window, 
+            which brings itself to front and makes itself the key window.
+            By returning true, we inform the window to dispatch that mouse down to the view too.
+            </summary>
+            <returns><c>true</c>, if first mouse was acceptsed, <c>false</c> otherwise.</returns>
+            <param name="bjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.MouseEntered(AppKit.NSEvent)">
+            <summary>
+            Mouses entered the view
+            </summary>
+            <param name="cjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.MouseDown(AppKit.NSEvent)">
+            <summary>
+            Mouse is down in the view.
+            </summary>
+            <param name="djoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.MouseDragged(AppKit.NSEvent)">
+            <summary>
+            Mouse is dragged in the view
+            </summary>
+            <param name="ejoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.RightMouseDragged(AppKit.NSEvent)">
+            <summary>
+            Rights the mouse dragged.
+            </summary>
+            <param name="fjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.RightMouseDown(AppKit.NSEvent)">
+            <summary>
+            Mouse right btton is down in the view
+            </summary>
+            <param name="gjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.OtherMouseDown(AppKit.NSEvent)">
+            <summary>
+            Others the mouse down.
+            </summary>
+            <param name="hjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.OtherMouseUp(AppKit.NSEvent)">
+            <summary>
+            Others the mouse up.
+            </summary>
+            <param name="ijoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.OtherMouseDragged(AppKit.NSEvent)">
+            <summary>
+            Others the mouse dragged.
+            </summary>
+            <param name="jjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.ScrollWheel(AppKit.NSEvent)">
+            <summary>
+            The mouse wheel is scrolled
+            </summary>
+            <param name="kjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.MouseMoved(AppKit.NSEvent)">
+            <summary>
+            The mouse has moved in the view
+            </summary>
+            <param name="ljoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.MouseUp(AppKit.NSEvent)">
+            <summary>
+            The mouse left button is up in the view.
+            </summary>
+            <param name="mjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.RightMouseUp(AppKit.NSEvent)">
+            <summary>
+            The mouse right button is up in the view
+            </summary>
+            <param name="njoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.MouseExited(AppKit.NSEvent)">
+            <summary>
+            The mouse left the view
+            </summary>
+            <param name="ojoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.AcceptsFirstResponder">
+            <summary>
+            Overriden to return false - i.e. the view cannot be focused.
+            </summary>
+            <returns><c>true</c>, if first responder was acceptsed, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.KeyDown(AppKit.NSEvent)">
+            <summary>
+            Key down.
+            </summary>
+            <param name="pjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.PerformKeyEquivalent(AppKit.NSEvent)">
+            <summary>
+            Performs the key equivalent. Passes the key event to Nevron if it wasn't handled
+            by the base class (NSView).
+            </summary>
+            <returns><c>true</c>, if key equivalent was performed, <c>false</c> otherwise.</returns>
+            <param name="qjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.KeyUp(AppKit.NSEvent)">
+            <summary>
+            Key up.
+            </summary>
+            <param name="rjoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.BecomeFirstResponder">
+            <summary>
+            Becomes the first responder.
+            </summary>
+            <returns><c>true</c>, if first responder was become, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.ResignFirstResponder">
+            <summary>
+            Resigns the first responder.
+            </summary>
+            <returns><c>true</c>, if first responder was resigned, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.UpdateTrackingAreas">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Internal.xioh.CursorUpdate(AppKit.NSEvent)">
+            <Docs>To be added.</Docs>
+            <remarks>To be added.</remarks>
+            <summary>
+            Callled by the tracking area to update the cursor
+            </summary>
+            <param name="akoh">The event.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.fmoh`1.OpenFile(AppKit.NSApplication,System.String)">
+            <summary>
+            Called when the application is launched by the OS to open the given file.
+            </summary>
+            <returns><c>true</c>, if file was opened, <c>false</c> otherwise.</returns>
+            <param name="hmoh">Sender.</param>
+            <param name="imoh">Filename.</param>
+        </member>
+        <member name="M:Nevron.Nov.Internal.fmoh`1.ApplicationDockMenu(AppKit.NSApplication)">
+            <summary>
+            Creates the application dock menu.
+            </summary>
+            <returns>The dock menu.</returns>
+            <param name="kmoh">Sender.</param>
+        </member>
+        <member name="T:Nevron.Nov.Data.NCLRDataTableDataTableAdapter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.RowCount">
+            <summary>
+            Gets the count of rows in the data table
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.FieldCount">
+            <summary>
+            Gets the count of fields in the data table
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.CanAddRow">
+            <summary>
+            Determines whether the data table supports the AddRow operation
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.CanInsertRow">
+            <summary>
+            Determines whether the data table supports the InsertRow operation
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.CanRemoveRow">
+            <summary>
+            Determines whether the data table supports the RemoveRow operation
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.CanAddField">
+            <summary>
+            Determines whether the data table supports the AddField operation
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.CanInsertField">
+            <summary>
+            Determines whether the data table supports the InsertField operation
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.CanRemoveField">
+            <summary>
+            Determines whether the data table supports the RemoveField operation
+            </summary>
+        </member>
+        <member name="P:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.CanRenameField">
+            <summary>
+            Determines whether the data table supports the SetFieldName operation
+            </summary>
+        </member>
+        <member name="M:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.GetValue(System.Int32,System.Int32)">
+            <summary>
+            Gets the value for a given [row:field]
+            </summary>
+            <param name="row"></param>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.GetFieldIndex(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nevron.Nov.Data.NCLRDataTableDataTableAdapter.GetFieldInfo(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
